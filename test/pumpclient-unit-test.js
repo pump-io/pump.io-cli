@@ -1,8 +1,8 @@
-// dialback-route-test.js
+// app-unit-test.js
 //
-// Test the dialback route for the app
+// Test the client utilities
 //
-// Copyright 2012, E14N https://e14n.com/
+// Copyright 2017 AJ Jordan <alex@strugee.net>
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -18,24 +18,28 @@
 
 "use strict";
 
-var assert = require("assert"),
-    vows = require("vows"),
-    Step = require("step"),
+var Step = require("step"),
     _ = require("lodash"),
-    httputil = require("./lib/http"),
+    assert = require("assert"),
+    vows = require("vows"),
+    fs = require("fs"),
+    path = require("path"),
     oauthutil = require("./lib/oauth"),
-    apputil = require("./lib/app"),
-    withAppSetup = apputil.withAppSetup;
+    httputil = require("./lib/http");
 
 var ignore = function(err) {};
 
-var suite = vows.describe("dialback endpoint API");
+var suite = vows.describe("pumpclient module interface");
 
-suite.addBatch(
-    withAppSetup({
-        "and we check the dialback endpoint":
-        httputil.endpoint("/api/dialback", ["POST"])
-    })
-);
+suite.addBatch({
+    "When we get the pumpclient module": {
+        topic: function() {
+            return require("../lib/pumpclient");
+        },
+        "it exports an object": function(err, pumpclient) {
+            assert.isObject(pumpclient);
+        }
+    }
+});
 
-suite["export"](module);
+suite.export(module);
