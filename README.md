@@ -6,6 +6,7 @@ also serve as API usage samples.
 [![Build Status](https://travis-ci.org/pump-io/pump-cli.svg?branch=master)](https://travis-ci.org/pump-io/pump-cli)
 [![Coverage Status](https://coveralls.io/repos/github/pump-io/pump-cli/badge.svg?branch=master)](https://coveralls.io/github/pump-io/pump-cli?branch=master)
 [![npm](https://img.shields.io/npm/v/pump-cli.svg)](https://npmjs.com/package/pump-cli)
+[![NSP Status](https://nodesecurity.io/orgs/pumpio/projects/4ba122c0-b690-480d-826c-45509ea4ad8e/badge)](https://nodesecurity.io/orgs/pumpio/projects/4ba122c0-b690-480d-826c-45509ea4ad8e)
 [![Greenkeeper badge](https://badges.greenkeeper.io/pump-io/pump-cli.svg)](https://greenkeeper.io/)
 
 ## Documentation
