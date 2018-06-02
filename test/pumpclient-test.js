@@ -1,4 +1,4 @@
-// app-unit-test.js
+// pumpclient-test.js
 //
 // Test the client utilities
 //

@@ -2,6 +2,8 @@
 logs
 *.log
 npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
 # Runtime data
 pids
@@ -14,7 +16,6 @@ lib-cov
 
 # Coverage directory used by tools like istanbul
 coverage
-coverage-root
 
 # nyc test coverage
 .nyc_output
@@ -22,15 +23,21 @@ coverage-root
 # Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
 .grunt
 
+# Bower dependency directory (https://bower.io/)
+bower_components
+
 # node-waf configuration
 .lock-wscript
 
-# Compiled binary addons (http://nodejs.org/api/addons.html)
+# Compiled binary addons (https://nodejs.org/api/addons.html)
 build/Release
 
 # Dependency directories
-node_modules
-jspm_packages
+node_modules/
+jspm_packages/
+
+# TypeScript v1 declaration files
+typings/
 
 # Optional npm cache directory
 .npm
@@ -47,6 +54,14 @@ jspm_packages
 # Yarn Integrity file
 .yarn-integrity
 
-# pump.io stuff
+# dotenv environment variables file
+.env
 
-public/template/*.jade.js
+# next.js build output
+.next
+
+# vuepress build output
+.vuepress/dist
+
+# Serverless directories
+.serverless
