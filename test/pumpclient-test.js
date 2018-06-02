@@ -23,11 +23,7 @@ var Step = require("step"),
     assert = require("assert"),
     vows = require("vows"),
     fs = require("fs"),
-    path = require("path"),
-    oauthutil = require("./lib/oauth"),
-    httputil = require("./lib/http");
-
-var ignore = function(err) {};
+    path = require("path");
 
 var suite = vows.describe("pumpclient module interface");
 
