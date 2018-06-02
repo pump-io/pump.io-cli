@@ -30,7 +30,7 @@
   "scripts": {
     "test": "npm run lint && nyc -r lcov npm run test:vows",
     "test:vows": "vows -v test/*-test.js",
-    "test:install": "npm pack && npm install -g pump.io-*.tgz # npm/npm#20241",
+    "test:install": "npm pack && npm install -g pump-cli-*.tgz # npm/npm#20241",
     "test:report-coverage": "coveralls < coverage/lcov.info",
     "lint": "npm run lint:jshint && npm run lint:jscs && npm run lint:deps",
     "lint:deps": "dependency-check package.json bin/* test/*.js > /dev/null && dependency-check --unused package.json -i dependency-check -i jscs -i jshint -i nyc -i coveralls bin/* test/*.js > /dev/null",
