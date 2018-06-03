@@ -12,10 +12,3 @@ insert_final_newline = true
 [*.md]
 trim_trailing_whitespace = false
 indent_size = unset
-
-[*.{json,css}]
-indent_size = 2
-
-[*.{pug,jade}]
-indent_size = 2
-trim_trailing_whitespace = false
