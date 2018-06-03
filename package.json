@@ -1,5 +1,5 @@
 {
-  "name": "pump-cli",
+  "name": "pump.io-cli",
   "preferGlobal": "true",
   "homepage": "http://pump.io/",
   "version": "6.0.0-alpha.0",
@@ -30,7 +30,7 @@
   "scripts": {
     "test": "npm run lint && nyc -r lcov npm run test:vows",
     "test:vows": "vows -v test/*-test.js",
-    "test:install": "npm pack && npm install -g pump-cli-*.tgz # npm/npm#20241",
+    "test:install": "npm pack && npm install -g pump.io-cli-*.tgz # npm/npm#20241",
     "test:report-coverage": "coveralls < coverage/lcov.info",
     "lint": "npm run lint:jshint && npm run lint:jscs && npm run lint:deps",
     "lint:deps": "dependency-check package.json bin/* test/*.js > /dev/null && dependency-check --unused package.json -i dependency-check -i jscs -i jshint -i nyc -i coveralls bin/* test/*.js > /dev/null",
@@ -46,9 +46,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/pump-io/pump-cli.git"
+    "url": "git://github.com/pump-io/pump.io-cli.git"
   },
-  "bugs": "https://github.com/pump-io/pump-cli/issues",
+  "bugs": "https://github.com/pump-io/pump.io-cli/issues",
   "keywords": [
     "activitystreams",
     "socialnetwork",
