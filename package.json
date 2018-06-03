@@ -10,7 +10,7 @@
     "dependency-check": "^2.8.0",
     "jscs": "^3.0.3",
     "jshint": "^2.9.2",
-    "nyc": "^11.2.1",
+    "nyc": "^12.0.1",
     "vows": "^0.8.1"
   },
   "dependencies": {
