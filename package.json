@@ -11,7 +11,7 @@
     "jscs": "^3.0.3",
     "jshint": "^2.9.2",
     "nyc": "^12.0.1",
-    "vows": "^0.8.1"
+    "vows": "^1.0.0-alpha.1"
   },
   "dependencies": {
     "lodash": "^4.17.4",
@@ -29,7 +29,7 @@
   },
   "scripts": {
     "test": "npm run lint && nyc -r lcov npm run test:vows",
-    "test:vows": "vows -v test/*-test.js",
+    "test:vows": "vows test/*-test.js",
     "test:install": "npm pack && npm install -g pump.io-cli-*.tgz # npm/npm#20241",
     "test:report-coverage": "coveralls < coverage/lcov.info",
     "lint": "npm run lint:jshint && npm run lint:jscs && npm run lint:deps",

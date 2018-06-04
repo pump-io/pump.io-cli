@@ -20,8 +20,8 @@
 
 var Step = require("step"),
     _ = require("lodash"),
-    assert = require("assert"),
     vows = require("vows"),
+    assert = vows.assert,
     fs = require("fs"),
     path = require("path");
 
