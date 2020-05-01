@@ -17,7 +17,8 @@
     "lodash": "^4.17.4",
     "oauth-evanp": "^0.9.10-evanp.2",
     "optimist": "^0.6.1",
-    "step": "^1.0.0"
+    "step": "^1.0.0",
+    "snyk": "^1.316.1"
   },
   "bin": {
     "pump-authorize": "./bin/pump-authorize",
@@ -42,7 +43,9 @@
     "update-docs:readme": "sed \"s/^Version .*\\..*\\..*$/Version $npm_package_version/\" README.md | sponge README.md",
     "version": "npm run update-docs && git add README.md doc/",
     "postversion": "npm run postversion:push",
-    "postversion:push": "git push origin v$npm_package_version && git push --set-upstream origin $(git symbolic-ref --short HEAD)"
+    "postversion:push": "git push origin v$npm_package_version && git push --set-upstream origin $(git symbolic-ref --short HEAD)",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -65,5 +68,6 @@
   "engines": {
     "node": ">=6 <=9",
     "npm": ">=2"
-  }
+  },
+  "snyk": true
 }
